@@ -9,6 +9,7 @@ var rollResult = {};
 var aPlayerIsEligibleToWin = false;
 disableAllButtons();
 $("rollButton1").disabled = false;
+setClickHandler();
 
 function resetGame() {
   doubleCountTracker = 0;
@@ -199,7 +200,9 @@ function stay(playerNum) {
     aPlayerIsEligibleToWin = true;
   }
 }
-
+function setClickHandler() {
+  console.log($("dice1").addEventListener("onclick"));
+}
 function $(id) {
   return document.getElementById(id);
 }
